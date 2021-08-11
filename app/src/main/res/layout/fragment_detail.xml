@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FragmentDetail">
+
+    <ImageView
+        android:id="@+id/img_person"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_baseline_person_64"
+        android:contentDescription="@string/str_image_contact" />
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/img_person"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/str_contact_name"
+        android:inputType="textPersonName"
+        android:autofillHints="@string/str_contact_name"
+        tools:text="Contact name" />
+
+    <EditText
+        android:id="@+id/edt_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/edt_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/str_number_phone"
+        android:autofillHints="@string/str_number_phone"
+        android:inputType="phone"
+        tools:text="phone number"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/edt_phone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/str_save"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/btn_save"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/str_delete"/>
+</RelativeLayout>
